@@ -24,7 +24,7 @@
                        │    │
                        └────┘
 ```
-- We must design a traffic light controller to save the cows
+- We must design a traffic light controller to save the cows.
 - Here is the state diagram:
 ![FSM](FSM.png)
 
@@ -49,5 +49,6 @@
 | S2 | Farm road Green / Highway Red |
 | S3 | Farm road Yellow / Highway Red |
 
-- Design a Mealy FSM for the traffic light controller
-- Write a test bench and verify the FSM
+- Design a Mealy FSM for the traffic light controller.
+- Write a test bench and verify the FSM.
+- Upload the code to this folder.
