@@ -26,9 +26,11 @@
 ```
 - We must design a traffic light controller to save the cows.
 - Here is the state diagram:
+
 ![FSM](FSM.png)
 
 - FSM description:
+
 | Input | Description |
 | :----: | :------------------: |
 | reset | Place FSM in initial state |
@@ -36,11 +38,13 @@
 | TS | Short time interval expired |
 | TL | Long time interval expired |
 
+
 | Outputs | Description |
 | :--------: | :--------------: |
 | HG, HY, HR | Assert green/yellow/red highway lights |
 | FG, FY, FR | Assert green/yellow/red farm lights |
 | ST | Start timing a short or long interval |
+
 
 | State | Description |
 | :---: | :-------------------: |
@@ -48,6 +52,7 @@
 | S1 | Highway Yellow / Farm road Red |
 | S2 | Farm road Green / Highway Red |
 | S3 | Farm road Yellow / Highway Red |
+
 
 - Design a Mealy FSM for the traffic light controller.
 - Write a test bench and verify the FSM.
