@@ -39,3 +39,4 @@
 - [Vending Machine FSM](https://github.com/alfadelta10010/SystemVerilog-playground/tree/main/Vending_Machine_FSM)
 - [Parameterised RAM](https://github.com/alfadelta10010/SystemVerilog-playground/tree/main/Param_RAM)
 - [HDL ROM Module](https://github.com/alfadelta10010/SystemVerilog-playground/tree/main/HDL_ROM)
+- [4-Bit Hex Decoder](https://github.com/alfadelta10010/SystemVerilog-playground/tree/main/4-Bit_Hex_Decoder)
