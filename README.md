@@ -31,7 +31,7 @@
 - [N-Bit ALU](https://github.com/alfadelta10010/SystemVerilog-playground/tree/main/N-Bit_ALU)
 - [N-Bit Up/Down Counter](https://github.com/alfadelta10010/SystemVerilog-playground/tree/main/N-Bit_Up_Down_Counter)
 - [Reduce 1s FSM](https://github.com/alfadelta10010/SystemVerilog-playground/tree/main/Reduce_1s_FSM)
-- [Sequence Detector (01/10)](https://github.com/alfadelta10010/SystemVerilog-playground/tree/main/sequence_detect_01_10)
+- [Sequence Detector (01/10)](https://github.com/alfadelta10010/SystemVerilog-playground/tree/main/Sequence_Detect_FSM)
 - [Shift Register PISO](https://github.com/alfadelta10010/SystemVerilog-playground/tree/main/PISO_Shift_Register)
 - [Shift Register SIPO](https://github.com/alfadelta10010/SystemVerilog-playground/tree/main/SIPO_Shift_Register)
 - [Shift Register SISO](https://github.com/alfadelta10010/SystemVerilog-playground/tree/main/SISO_Shift_Register)
