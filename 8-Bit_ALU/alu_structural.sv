@@ -6,9 +6,10 @@ module alu_structural (
 );
     wire [7:0] add_result, sub_result, and_result, xor_result;
     adder add_inst (a, b, add_result);
-    subtractor sub_inst (a, b, sub_result);
     anda and_inst (a, b, and_result);
     xorr xor_inst (a, b, xor_result);
+    xorr xor_ins (b, 1, f);
+	 mux122 sub_inst (a, f, 1, sub_result);
 
     always_comb begin
         case (opcode)
