@@ -1,5 +1,7 @@
 module ParameterizedRAM #(parameter DATA_WIDTH = 8, parameter ADDR_WIDTH = 10, parameter DEPTH = 1024)
-  (input logic [ADDR_WIDTH-1:0] write_addr,
+  (input logic clk, // Clock signal
+   input logic rst, // Reset signal
+   input logic [ADDR_WIDTH-1:0] write_addr,
    input logic [ADDR_WIDTH-1:0] read_addr,
    input logic write_enable,
    input logic read_enable,
