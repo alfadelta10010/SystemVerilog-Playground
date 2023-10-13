@@ -3,25 +3,16 @@ module PriorityEncoder16 (
   output reg [3:0] out // 4-bit output representing the priority-encoding
 );
 
-always @* begin
-    casez(in)
-        16'b1???????????????: out = 4'b0000;
-        16'b01???????????????: out = 4'b0001;
-        16'b001??????????????: out = 4'b0010;
-        16'b0001?????????????: out = 4'b0011;
-        16'b00001????????????: out = 4'b0100;
-        16'b000001???????????: out = 4'b0101;
-        16'b0000001??????????: out = 4'b0110;
-        16'b00000001?????????: out = 4'b0111;
-        16'b000000001????????: out = 4'b1000;
-        16'b0000000001???????: out = 4'b1001;
-        16'b00000000001??????: out = 4'b1010;
-        16'b000000000001?????: out = 4'b1011;
-        16'b0000000000001???: out = 4'b1100;
-        16'b00000000000001?: out = 4'b1101;
-        16'b000000000000001: out = 4'b1110;
-        default: out = 4'b1111;
-    endcase
+always_comb begin
+    out = 4'b1111; // Initialize the output to all ones (no active inputs)
+
+    // Priority encoding logic
+    for (int i = 15; i >= 0; i = i - 1) begin
+        if (in[i] == 1'b1) begin
+            out = i[3:0]; // Set the output to the highest priority active input
+            break;        // Break the loop once an active input is found
+        end
+    end
 end
 
 endmodule
