@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 
-module Testbench;
+module ParameterizedRAM_Testbench;
 
   reg clk;
   reg rst;
@@ -13,6 +13,8 @@ module Testbench;
 
   // Instantiate the ParameterizedRAM module with the desired parameters
   ParameterizedRAM #(8, 10, 1024) ram (
+    .clk(clk),
+    .rst(rst),
     .write_addr(write_addr),
     .read_addr(read_addr),
     .write_enable(write_enable),
@@ -40,7 +42,7 @@ module Testbench;
     #10 rst = 0;
 
     // Perform read and write operations
-    // Write 0xAA to address 10
+    // Write 8'hAA to address 10
     #10 write_addr = 10;
     write_enable = 1;
     data_in = 8'hAA;
@@ -64,8 +66,8 @@ endmodule
 
 module top;
   // Instantiate the testbench
-  Testbench testbench();
-  
+  ParameterizedRAM_Testbench testbench();
+
   // Provide a clock signal to the testbench
   always begin
     #5 testbench.clk = ~testbench.clk;
