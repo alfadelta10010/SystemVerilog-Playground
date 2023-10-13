@@ -1,19 +1,27 @@
-`timescale 1ns / 1ps
-module testbench();
-  reg [3:0] bin;
-  wire [6:0] seg;
+module SevenSegmentDecoder;
 
-  seven_segment_decoder uut (
-    .bin(bin), 
-    .seg(seg)
+  // Inputs
+  reg [3:0] binary_input;
+  
+  // Outputs
+  wire [6:0] segment_output;
+  
+  // Instantiate the SevenSegmentDecoder module
+  SevenSegmentDecoder decoder(
+    .binary_input(binary_input),
+    .segment_output(segment_output)
   );
 
   initial begin
-    bin = 4'b0000; #10;
-    bin = 4'b0001; #10;
-    bin = 4'b0010; #10;
-    bin = 4'b0011; #10;
-    bin = 4'b0100; #10;
-    bin = 4'b0101; #10;
-    bin = 4'b0110; #10;
-    bin = 4'b0111; #```
+    // Test all possible 4-bit binary values (0 to 9) as input
+    for (binary_input = 0; binary_input <= 9; binary_input = binary_input + 1) begin
+      $display("Binary Input: %b, 7-Segment Output: %b", binary_input, segment_output);
+    end
+
+    // You can add more test cases if needed
+
+    // Finish the simulation
+    $finish;
+  end
+
+endmodule
