@@ -3,7 +3,7 @@
 `define DELAY 1
 // 3. Include Statements
 //`include "counter_define.h"
-module tb_traffic;
+module traffic_light;
 // 4. Parameter definitions
 parameter ENDTIME  = 400000;
 // 5. DUT Input regs
@@ -17,7 +17,7 @@ wire [2:0] light_highway;
 
 // fpga4student.com FPGA projects, VHDL projects, Verilog projects
 // 7. DUT Instantiation
-traffic_light tb(light_highway, light_farm, sensor, clk, rst_n);
+traffic_light(light_highway, light_farm, sensor, clk, rst_n);
 
 // 8. Initial Conditions
 initial
