@@ -6,10 +6,10 @@ module Nalu_structural#(parameter N=8) (
 	 
 );
     wire [7:0] add_result, sub_result, and_result, xor_result;
-    adder add_inst (a, b, add_result);
-    anda and_inst (a, b, and_result);
-    xorr xor_inst (a, b, xor_result);
-    subractor(a, b, sub_result);
+    Nadder add_inst (a, b, add_result);
+    Nanda and_inst (a, b, and_result);
+    Nxorr xor_inst (a, b, xor_result);
+    Nsubractor(a, b, sub_result);
 
     always_comb begin
         case (opcode)
