@@ -1,4 +1,4 @@
-module subtractor (
+module Nsubtractor (
     input [N-1:0] a,
     input [N-1:0] b,
     output reg [N-1:0] difference
